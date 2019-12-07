@@ -20,9 +20,9 @@ services:
     restart: always
     command:
       - -l
-      - 127.0.0.1:containerPort # like 127.0.0.1:1234
+      - 0.0.0.0:containerPort # like 127.0.0.1:1234
       - -i
-      - 127.0.0.1
+      - 0.0.0.0
       - -s
       - serverIP:serverPort  # like "1.1.1.1:2333"
       - -p
@@ -41,8 +41,8 @@ $ docker run -d -p yourMachinePort:containerPort \
     --restart always \
     --name brook-test1 \
     kurisux/brook-cli:latest \
-    -l 127.0.0.1:containerPort \
-    -i 127.0.0.1 \
+    -l 0.0.0.0:containerPort \
+    -i 0.0.0.0 \
     -s serverIP:serverPort  \
     -p yourPassword
     - --http
