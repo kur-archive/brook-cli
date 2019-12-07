@@ -1,5 +1,11 @@
 # brook-cli
 
+## Install
+
+```shell
+$ docker pull kurisux/brook-cli:latest
+```
+
 ## How to use
 
 ### docker-compose
