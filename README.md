@@ -28,11 +28,11 @@ $ docker-compose up -d
 
 ```shell
 $ docker run -p yourMachinePort:containerPort \
---restart always \
--e LOCAL_BROOK_LISTEN_IP=127.0.0.1 \
--e LOCAL_BROOK_LISTEN_PORT=yourMachinePort \
--e SERVER_IP=serverIP \
--e SERVER_PORT=serverPort \
--e SERVER_PASSWORD=yourPassword \
-kurisux/brook-cli:latest
+    --restart always \
+    -e LOCAL_BROOK_LISTEN_IP=127.0.0.1 \
+    -e LOCAL_BROOK_LISTEN_PORT=yourMachinePort \
+    -e SERVER_IP=serverIP \
+    -e SERVER_PORT=serverPort \
+    -e SERVER_PASSWORD=yourPassword \
+    kurisux/brook-cli:latest
 ```
