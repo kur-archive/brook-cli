@@ -19,10 +19,14 @@ services:
       - "yourMachinePort:containerPort" # like "1234:1234"
     restart: always
     command:
-      - -l=127.0.0.1:containerPort # like 127.0.0.1:1234
-      - -i=127.0.0.1
-      - -s=serverIP:serverPort  # like "1.1.1.1:2333"
-      - -p=yourPassword
+      - -l
+      - 127.0.0.1:containerPort # like 127.0.0.1:1234
+      - -i
+      - 127.0.0.1
+      - -s
+      - serverIP:serverPort  # like "1.1.1.1:2333"
+      - -p
+      - yourPassword
       - --http
 ```
 
