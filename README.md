@@ -20,7 +20,7 @@ services:
     restart: always
     command:
       - -l
-      - 0.0.0.0:containerPort # like 127.0.0.1:1234
+      - 0.0.0.0:containerPort # like 0.0.0.0:1234
       - -i
       - 0.0.0.0
       - -s
