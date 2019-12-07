@@ -30,7 +30,7 @@ services:
 $ docker-compose up -d
 ```
 
-### docker
+### docker cli
 
 ```shell
 $ docker run -d -p yourMachinePort:containerPort \
