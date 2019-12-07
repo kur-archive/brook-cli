@@ -8,7 +8,7 @@ $ docker pull kurisux/brook-cli:latest
 
 ## How to use
 
-### docker-compose
+### docker compose
 
 ```yaml
 version: '2.1'
