@@ -7,7 +7,7 @@ RUN echo "export GO111MODULE=on" >> /etc/profile \
     && echo "export GOPROXY=https://goproxy.cn" >> /etc/profile \
     && source /etc/profile
 
-# 安装 micro
+# install 
 RUN apk update && apk add go git musl-dev xz binutils \
     && cd \
     && source /etc/profile \
