@@ -14,7 +14,7 @@ RUN apk update && apk add go git musl-dev xz binutils \
     && go get -u -v github.com/txthinking/brook/cli/brook \
     && go install github.com/txthinking/brook/cli/brook
 
-# 压缩 和 加壳
+# compression && packing
 RUN wget https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz \
     && xz -d upx-3.95-amd64_linux.tar.xz \
     && tar -xvf upx-3.95-amd64_linux.tar \
