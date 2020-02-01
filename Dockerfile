@@ -29,6 +29,3 @@ FROM alpine:latest
 COPY --from=0 /brook /usr/local/bin/
 
 ENTRYPOINT ["brook", "client"]
-
-
-# curl https://api.github.com/repos/txthinking/brook/releases/latest |jq -r ".assets[0].browser_download_url"
