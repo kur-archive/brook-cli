@@ -7,7 +7,7 @@ USER root
 # install
 RUN apt update \
     && apt install -y jq curl wget tar xz-utils binutils \
-    && wget `curl https://api.github.com/repos/txthinking/brook/releases/latest | jq -r ".assets[0].browser_download_url"` -o brook \
+    && wget `curl https://api.github.com/repos/txthinking/brook/releases/latest | jq -r ".assets[0].browser_download_url"` -O brook \
     && chmod a+x brook
 
 # step 1
