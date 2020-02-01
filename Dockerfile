@@ -10,6 +10,18 @@ RUN apt update \
     && wget `curl https://api.github.com/repos/txthinking/brook/releases/latest | jq -r ".assets[0].browser_download_url"` -O brook \
     && chmod a+x brook
 
+RUN wget https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz \
+    && xz -d upx-3.95-amd64_linux.tar.xz \
+    && tar -xvf upx-3.95-amd64_linux.tar \
+    && cd upx-3.95-amd64_linux \
+    && chmod a+x ./upx \
+    && mv ./upx /usr/local/bin/ \
+    && cd / \
+    && strip --strip-unneeded brook \
+    && upx brook \
+    && chmod a+x ./brook \
+    && cp brook /usr/local/bin
+
 # step 1
 
 FROM alpine:latest
