@@ -19,6 +19,7 @@ services:
       - "yourMachinePort:containerPort" # like "1234:1234"
     restart: always
     command:
+      - client
       - -l
       - 0.0.0.0:containerPort # like 0.0.0.0:1234
       - -i
@@ -41,6 +42,7 @@ $ docker run -d -p yourMachinePort:containerPort \
     --restart always \
     --name brook-test1 \
     kurisux/brook-cli:latest \
+    client \
     -l 0.0.0.0:containerPort \
     -i 0.0.0.0 \
     -s serverIP:serverPort  \

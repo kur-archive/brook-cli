@@ -28,4 +28,4 @@ FROM alpine:latest
 
 COPY --from=0 /brook /usr/local/bin/
 
-ENTRYPOINT ["brook", "client"]
+ENTRYPOINT ["brook"]
