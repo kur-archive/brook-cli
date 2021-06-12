@@ -7,7 +7,7 @@ USER root
 # install
 RUN apt update \
     && apt install -y jq curl wget tar xz-utils binutils \
-    && wget `curl https://api.github.com/repos/txthinking/brook/releases/latest | grep -o "https://github.com/txthinking/brook/releases/download/.*/brook_linux_amd64"` -O brook \
+    && wget `curl https://api.github.com/repos/txthinking/brook/releases/latest | grep -o "https://github.com/txthinking/brook/releases/download/.*/brook_darwin_arm64"` -O brook \
     && chmod a+x brook
 
 RUN wget https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz \
